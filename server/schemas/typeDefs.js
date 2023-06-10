@@ -19,7 +19,7 @@ type Book {
     title: String!
 }
 
-imput bookInput {
+input BookInput {
     authors: [String]
     description: String!
     bookId: String!
@@ -40,9 +40,9 @@ type Auth {
 type Mutation {
     login(email: String!, password: String!): Auth
     getSingleUser(username: String!): User
-    createUser(username: String!, email String!, password: String!): Auth
-    saveBook(bookData: Bookinput!): User
-    deletBook(bookId: ID!): User
+    createUser(username: String!, email: String!, password: String!): Auth
+    saveBook(bookData: BookInput!): User
+    deleteBook(bookId: ID!): User
 }
 `;
 
